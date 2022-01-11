@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/products_menu"
+        android:enabled="true"
+        android:title="products"
+        android:icon="@drawable/ic_cart"/>
+
+    <item android:id="@+id/favorites_menu"
+        android:enabled="true"
+        android:title="favorites"
+        android:icon="@drawable/ic_favorites"/>
+
+    <item android:id="@+id/bag_menu"
+        android:enabled="true"
+        android:title="basket"
+        android:icon="@drawable/ic_basket"/>
+
+</menu>
