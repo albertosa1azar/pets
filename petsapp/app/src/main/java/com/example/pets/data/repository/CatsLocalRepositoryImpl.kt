@@ -4,9 +4,9 @@ import com.example.pets.data.database.AppDataBase
 import com.example.pets.data.database.entity.CatBreedEntity
 import com.example.pets.domain.repository.CatsLocalRepository
 
-class CatsLocalRepositoryImpl (
+class CatsLocalRepositoryImpl(
     appDataBase: AppDataBase
-): CatsLocalRepository {
+) : CatsLocalRepository {
 
     private val dao = appDataBase.getCatsDao()
 

@@ -21,14 +21,14 @@ class CatsViewModel(
         launch {
             val catList = catsRepository.getCatBreed()
             val favoritedList = catsLocalRepository.getAll()
-            setCatIsFavorite(catList,favoritedList)
+            setCatIsFavorite(catList, favoritedList)
             _cats.postValue(catList)
         }
     }
 
     private fun setCatIsFavorite(catsList: List<CatBreed>, favoritedList: List<CatBreedEntity>?) {
         val idList = favoritedList?.map { it.id }
-        catsList.forEach{ cat ->
+        catsList.forEach { cat ->
             if (idList != null) {
                 cat.isFavorite = idList.contains(cat.id)
             }

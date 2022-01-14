@@ -8,7 +8,7 @@ import com.example.pets.data.database.dao.CatsDao
 import com.example.pets.data.database.entity.CatBreedEntity
 
 @Database(entities = [CatBreedEntity::class], version = 2)
-abstract class AppDataBase: RoomDatabase() {
+abstract class AppDataBase : RoomDatabase() {
 
     abstract fun getCatsDao(): CatsDao
 

@@ -5,26 +5,29 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.pets.R
 import com.example.pets.databinding.FragmentCatsBinding
 import com.example.pets.domain.entity.CatBreed
+import com.example.pets.presentation.base.BaseSearchFragment
 import com.example.pets.presentation.feature.pets.cats.detail.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class CatsFragment : Fragment() {
+class CatsFragment : BaseSearchFragment() {
 
     private lateinit var binding: FragmentCatsBinding
 
     private val viewModel: CatsViewModel by sharedViewModel()
+
+    override lateinit var itemList: List<CatBreed>
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentCatsBinding.inflate(layoutInflater)
+        setHasOptionsMenu(true)
         return binding.root
     }
 
@@ -35,23 +38,26 @@ class CatsFragment : Fragment() {
 
     private fun setUpViewModel() {
         viewModel.cats.observe(viewLifecycleOwner) { list ->
+            itemList = list
             setUpCatsRecyclerView(list)
         }
         viewModel.fetchCats()
     }
 
-    private fun setUpCatsRecyclerView(list: List<CatBreed>) {
+    override fun setUpCatsRecyclerView(list: List<CatBreed>) {
         binding.rvCats.apply {
             addItemDecoration(
                 DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
             )
-            adapter = CatsAdapter(list,
+            adapter = CatsAdapter(
+                list,
                 onCatClick = {
-                navigateToCatsDetail(it)
-            },
+                    navigateToCatsDetail(it)
+                },
                 onFavoriteClick = {
-                viewModel.setFavorite(it)
-            },)
+                    viewModel.setFavorite(it)
+                },
+            )
         }
     }
 

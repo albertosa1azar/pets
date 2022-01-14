@@ -8,7 +8,11 @@ import com.example.pets.R
 import com.example.pets.databinding.ItemCatsBreedsBinding
 import com.example.pets.domain.entity.CatBreed
 
-class CatsViewHolder(itemView: View, private val onCatClick: (CatBreed) -> Unit,private val onFavoriteClick: (CatBreed) -> Unit) :
+class CatsViewHolder(
+    itemView: View,
+    private val onCatClick: (CatBreed) -> Unit,
+    private val onFavoriteClick: (CatBreed) -> Unit
+) :
     RecyclerView.ViewHolder(itemView) {
     private val tvBreed = ItemCatsBreedsBinding.bind(itemView).tvBreed
     private val ivImage = ItemCatsBreedsBinding.bind(itemView).ivPetsPlaceholder

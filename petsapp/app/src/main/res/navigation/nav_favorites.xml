@@ -15,8 +15,7 @@
         android:id="@+id/fragment_favorites"
         android:name="com.example.pets.presentation.feature.favorites.FavoritesFragment"
         android:label="fragment_favorites"
-        tools:layout="@layout/fragment_favorites"
-        >
+        tools:layout="@layout/fragment_favorites">
         <action
             android:id="@+id/action_fragment_favorites_to_cats_detail_fragment"
             app:destination="@id/cats_detail_fragment" />

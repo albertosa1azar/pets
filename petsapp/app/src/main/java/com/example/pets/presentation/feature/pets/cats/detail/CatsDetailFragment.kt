@@ -9,12 +9,12 @@ import com.bumptech.glide.Glide
 import com.example.pets.databinding.FragmentCatsDetailBinding
 
 const val EXTRA_CAT_IMAGE = "EXTRA_CAT_IMAGE"
-const val EXTRA_CAT_DESCRIPTION   = "EXTRA_CAT_DESCRIPTION"
+const val EXTRA_CAT_DESCRIPTION = "EXTRA_CAT_DESCRIPTION"
 const val EXTRA_CAT_TEMPERAMENT = "EXTRA_CAT_TEMPERAMENT"
 const val EXTRA_CAT_COUNTRY_CODE = "EXTRA_CAT_COUNTRY_CODE"
 const val EXTRA_CAT_ORIGIN = "EXTRA_CAT_ORIGIN"
 
-class CatsDetailFragment: Fragment() {
+class CatsDetailFragment : Fragment() {
 
     private lateinit var binding: FragmentCatsDetailBinding
 

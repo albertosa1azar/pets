@@ -16,5 +16,5 @@ interface CatsDao {
     fun delete(catBreedEntity: CatBreedEntity)
 
     @Query("SELECT * FROM CatBreedEntity")
-    fun getAll():List<CatBreedEntity>?
+    fun getAll(): List<CatBreedEntity>?
 }

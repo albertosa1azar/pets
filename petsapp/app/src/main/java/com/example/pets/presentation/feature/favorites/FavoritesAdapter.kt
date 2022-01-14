@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.pets.R
 import com.example.pets.data.database.entity.CatBreedEntity
 import com.example.pets.presentation.feature.favorites.viewHolder.FavoritesViewHolder
-import com.example.pets.presentation.feature.pets.cats.viewHolder.CatsViewHolder
 
 class FavoritesAdapter(
     private val list: List<CatBreedEntity>,

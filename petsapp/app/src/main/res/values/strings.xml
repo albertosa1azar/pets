@@ -11,4 +11,5 @@
     <string name="txt_cats">Cats</string>
     <string name="txt_details">Details</string>
     <string name="txt_error">ERROR</string>
+    <string name="txt_menu_search">menu_search</string>
 </resources>
