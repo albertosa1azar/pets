@@ -35,19 +35,19 @@ class CatsFragment : Fragment() {
 
     private fun setUpViewModel() {
         viewModel.cats.observe(viewLifecycleOwner) { list ->
-            setUpCoffeeRecyclerView(list)
+            setUpCatsRecyclerView(list)
         }
-        viewModel.fetchCoffees()
+        viewModel.fetchCats()
     }
 
-    private fun setUpCoffeeRecyclerView(list: List<CatBreed>) {
+    private fun setUpCatsRecyclerView(list: List<CatBreed>) {
         binding.rvCats.apply {
             addItemDecoration(
                 DividerItemDecoration(context, DividerItemDecoration.VERTICAL)
             )
             adapter = CatsAdapter(list,
                 onCatClick = {
-                navigateToCoffeeDetail(it)
+                navigateToCatsDetail(it)
             },
                 onFavoriteClick = {
                 viewModel.setFavorite(it)
@@ -55,11 +55,11 @@ class CatsFragment : Fragment() {
         }
     }
 
-    private fun navigateToCoffeeDetail(catBreed: CatBreed) {
+    private fun navigateToCatsDetail(catBreed: CatBreed) {
         findNavController().navigate(
             R.id.cats_detail_fragment,
             bundleOf(
-                Pair(EXTRA_CAT_IMAGE, catBreed.image?.url),
+                Pair(EXTRA_CAT_IMAGE, catBreed.imageUrl),
                 Pair(EXTRA_CAT_DESCRIPTION, catBreed.description),
                 Pair(EXTRA_CAT_TEMPERAMENT, catBreed.temperament),
                 Pair(EXTRA_CAT_COUNTRY_CODE, catBreed.country_code),

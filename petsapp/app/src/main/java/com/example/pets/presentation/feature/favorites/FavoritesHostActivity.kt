@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.pets.R
-import com.example.pets.databinding.ActivityCatsHostBinding
 import com.example.pets.databinding.ActivityFavoritesHostBinding
 import com.example.pets.presentation.base.BaseBottomNavigationActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -44,7 +43,7 @@ class FavoritesHostActivity : BaseBottomNavigationActivity() {
     private fun setupNavController() {
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val title = when (destination.id) {
-                R.id.fragment_cats -> getString(R.string.txt_favorites)
+                R.id.fragment_favorites -> getString(R.string.txt_favorites)
                 else -> getString(R.string.txt_details)
             }
             supportActionBar?.title = title

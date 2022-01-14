@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_favorites"
+    app:startDestination="@id/fragment_favorites">
+
+    <fragment
+        android:id="@+id/cats_detail_fragment"
+        android:name="com.example.pets.presentation.feature.pets.cats.detail.CatsDetailFragment"
+        android:label="fragment_cats_detail"
+        tools:layout="@layout/fragment_cats_detail" />
+
+    <fragment
+        android:id="@+id/fragment_favorites"
+        android:name="com.example.pets.presentation.feature.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites"
+        >
+        <action
+            android:id="@+id/action_fragment_favorites_to_cats_detail_fragment"
+            app:destination="@id/cats_detail_fragment" />
+    </fragment>
+
+</navigation>

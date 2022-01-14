@@ -7,7 +7,7 @@ class CatBreed(
     var description: String,
     var origin: String,
     var country_code: String,
-    var image: CatImage?,
+    var imageUrl: String?,
     var isFavorite: Boolean = false
 
 )

@@ -2,36 +2,29 @@ package com.example.pets.presentation.feature.favorites
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.example.pets.domain.entity.CatBreed
+import com.example.pets.data.database.entity.CatBreedEntity
+import com.example.pets.domain.repository.CatsLocalRepository
 import com.example.pets.domain.repository.CatsRepository
 import com.example.pets.presentation.base.BaseViewModel
 
 class FavoritesViewModel(
     private val catsRepository: CatsRepository,
+    private val catsLocalRepository: CatsLocalRepository
 ) : BaseViewModel() {
 
-    private val _cats = MutableLiveData<List<CatBreed>>()
-    val cats: LiveData<List<CatBreed>> = _cats
+    private val _cats = MutableLiveData<List<CatBreedEntity>>()
+    val cats: LiveData<List<CatBreedEntity>> = _cats
 
-    fun fetchCoffees() {
+    fun fetchLocalCats() {
         launch {
-            val catsList = catsRepository.getCatBreed()
-            _cats.postValue(setCats(catsList))
-        }
+            val favoritedList = catsLocalRepository.getAll()
+            _cats.postValue(favoritedList)
 
+        }
     }
 
-    private fun setCats(repositoryList: List<CatBreed>): MutableList<CatBreed> {
-        val catsList = mutableListOf<CatBreed>()
-
-        repositoryList.forEach {
-            catsList.add(it)
-        }
-
-        return catsList
-    }
-
-    fun setFavorite(catBreed: CatBreed) {
-        TODO()
+    fun setFavorite(cat: CatBreedEntity) {
+        if (cat.isFavorite) catsLocalRepository.add(cat)
+        else catsLocalRepository.remove(cat)
     }
 }

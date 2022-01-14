@@ -11,7 +11,7 @@ class CatBreedMapper : DomainMapper<CatBreedResponse, CatBreed> {
         description = from.description,
         origin = from.origin,
         country_code = from.country_code,
-        image = from.image?.let { CatImageMapper().toDomain(it) },
+        imageUrl = from.image?.url,
     )
 
     override fun toDomain(from: List<CatBreedResponse>) = from.map {

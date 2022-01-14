@@ -4,16 +4,16 @@ import android.app.Application
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.pets.data.database.dao.AnywayDao
-import com.example.pets.data.database.entity.AnywayEntity
+import com.example.pets.data.database.dao.CatsDao
+import com.example.pets.data.database.entity.CatBreedEntity
 
-@Database(entities = [AnywayEntity::class], version = 1)
-abstract class AppDataBase : RoomDatabase() {
+@Database(entities = [CatBreedEntity::class], version = 2)
+abstract class AppDataBase: RoomDatabase() {
 
-    abstract fun getAnywayDao(): AnywayDao
+    abstract fun getCatsDao(): CatsDao
 
     companion object {
-        private const val DATABASE_NAME = ""
+        private const val DATABASE_NAME = "cats-db"
         fun create(application: Application): AppDataBase {
             return Room.databaseBuilder(
                 application,

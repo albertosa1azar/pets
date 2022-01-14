@@ -17,12 +17,15 @@ abstract class BaseViewModel : ViewModel() {
         _loading.postValue(true)
         viewModelScope.launch {
             try {
+                _loading.postValue(false)
                 _error.postValue(false)
                 block()
             } catch (ex: Exception) {
+                _loading.postValue(false)
                 _error.postValue(true)
+                ex.printStackTrace()
             }
-            _loading.postValue(false)
+
         }
     }
 }
