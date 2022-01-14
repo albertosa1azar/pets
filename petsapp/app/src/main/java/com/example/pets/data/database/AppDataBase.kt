@@ -8,7 +8,7 @@ import com.example.pets.data.database.dao.AnywayDao
 import com.example.pets.data.database.entity.AnywayEntity
 
 @Database(entities = [AnywayEntity::class], version = 1)
-abstract class AppDataBase: RoomDatabase() {
+abstract class AppDataBase : RoomDatabase() {
 
     abstract fun getAnywayDao(): AnywayDao
 

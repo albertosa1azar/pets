@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.feature.pets.cats.detail.CatsDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cats_image"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/paw_image_placeholder"
+            app:layout_constraintBottom_toTopOf="@+id/tv_cat_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cat_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_description"
+            app:layout_constraintBottom_toTopOf="@+id/tv_cat_temperament"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_cats_image"
+            tools:text="@string/txt_cat_description" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cat_temperament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_description"
+            app:layout_constraintBottom_toTopOf="@+id/tv_cat_country_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cat_description"
+            tools:text="@string/txt_cat_temperament" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cat_country_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_description"
+            app:layout_constraintBottom_toTopOf="@+id/tv_cat_origin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cat_temperament"
+            tools:text="@string/txt_cat_country_code" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_cat_origin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/txt_size_description"
+            app:layout_constraintBottom_toTopOf="@+id/iv_favorite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cat_country_code"
+            tools:text="@string/txt_cat_origin" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_favorite_outline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cat_origin" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -4,6 +4,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity
-class AnywayEntity (
+class AnywayEntity(
     @PrimaryKey val id: Int,
 )

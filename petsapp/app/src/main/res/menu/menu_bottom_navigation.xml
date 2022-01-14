@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/products_menu"
+    <item
+        android:id="@+id/pets_menu"
         android:enabled="true"
-        android:title="products"
-        android:icon="@drawable/ic_cart"/>
+        android:icon="@drawable/ic_pets"
+        android:title="@string/txt_pets" />
 
-    <item android:id="@+id/favorites_menu"
+    <item
+        android:id="@+id/favorites_menu"
         android:enabled="true"
-        android:title="favorites"
-        android:icon="@drawable/ic_favorites"/>
+        android:icon="@drawable/ic_favorite"
+        android:title="@string/txt_favorites" />
 
-    <item android:id="@+id/bag_menu"
+    <item
+        android:id="@+id/my_pets_menu"
         android:enabled="true"
-        android:title="basket"
-        android:icon="@drawable/ic_basket"/>
+        android:icon="@drawable/ic_person"
+        android:title="@string/txt_my_pets" />
 
 </menu>

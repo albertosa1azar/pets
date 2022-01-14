@@ -16,5 +16,5 @@ interface AnywayDao {
     fun delete(coffeeEntity: AnywayEntity)
 
     @Query("SELECT * FROM AnywayEntity")
-    fun getAll():List<AnywayEntity>?
+    fun getAll(): List<AnywayEntity>?
 }

@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Pets</string>
-    <string name="txt_anyway">Anyway</string>
+    <string name="txt_pets">Pets</string>
+    <string name="txt_favorites">Favorites</string>
+    <string name="txt_my_pets">My Pets</string>
+    <string name="text_breed">Breed</string>
+    <string name="txt_cat_description">Describes</string>
+    <string name="txt_cat_temperament">Temperament</string>
+    <string name="txt_cat_country_code">Country Code</string>
+    <string name="txt_cat_origin">Origin</string>
+    <string name="txt_cats">Cats</string>
+    <string name="txt_details">Details</string>
+    <string name="txt_error">ERROR</string>
 </resources>

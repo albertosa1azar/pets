@@ -15,7 +15,7 @@
         android:theme="@style/Theme.Pets"
         android:usesCleartextTraffic="true">
         <activity
-            android:name="com.example.pets.presentation.feature.anyway.AnywayActivity"
+            android:name="com.example.pets.presentation.feature.pets.PetsActivity"
             android:exported="true"
             android:theme="@style/Theme.Pets.NoActionBar">
             <intent-filter>
@@ -24,6 +24,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.pets.presentation.feature.pets.cats.CatsHostActivity"
+            android:exported="false"
+            android:label="Cats"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="com.example.pets.presentation.feature.favorites.FavoritesHostActivity"
+            android:exported="false"
+            android:label="Cats"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

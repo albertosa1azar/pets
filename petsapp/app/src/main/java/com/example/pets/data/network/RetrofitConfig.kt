@@ -6,9 +6,8 @@ import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
 object RetrofitConfig {
-
-    val service: PetsApi = Retrofit.Builder()
-        .baseUrl("")
+    val service: CatsApi = Retrofit.Builder()
+        .baseUrl("https://api.thecatapi.com/v1/")
         .addConverterFactory(
             MoshiConverterFactory.create(
                 Moshi.Builder()
@@ -17,5 +16,6 @@ object RetrofitConfig {
             )
         )
         .build()
-        .create(PetsApi::class.java)
+        .create(CatsApi::class.java)
+
 }
