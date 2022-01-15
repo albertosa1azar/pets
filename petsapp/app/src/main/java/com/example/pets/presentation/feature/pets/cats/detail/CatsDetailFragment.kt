@@ -44,10 +44,10 @@ class CatsDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.tvCatDescription.text = catDescription.toString()
-        binding.tvCatTemperament.text = catTemperament.toString()
-        binding.tvCatCountryCode.text = catCountryCode.toString()
-        binding.tvCatOrigin.text = catOrigin.toString()
+        binding.tvCatDescription.text = "Description: ${catDescription.toString()}"
+        binding.tvCatTemperament.text = "Temperament: ${catTemperament.toString()}"
+        binding.tvCatCountryCode.text = "Country: ${catCountryCode.toString()}"
+        binding.tvCatOrigin.text = "Origin: ${catOrigin.toString()}"
 
         Glide.with(view.context)
             .load(catImage)

@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.pets.R
 import com.example.pets.presentation.feature.favorites.FavoritesHostActivity
-import com.example.pets.presentation.feature.my_pets.MyPetsActivity
 import com.example.pets.presentation.feature.pets.PetsActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
@@ -40,10 +39,6 @@ abstract class BaseBottomNavigationActivity : AppCompatActivity() {
                 }
                 R.id.favorites_menu -> {
                     val intent = Intent(this, FavoritesHostActivity::class.java)
-                    startActivity(intent)
-                }
-                R.id.my_pets_menu -> {
-                    val intent = Intent(this, MyPetsActivity::class.java)
                     startActivity(intent)
                 }
             }

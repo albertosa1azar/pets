@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/drawable/ic_bag_add.xml" value="0.14635416666666667" />
+        <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/drawable/ic_favorite.xml" value="0.2703125" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/drawable/ic_favorite_filled.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/drawable/ic_favorite_outline.xml" value="0.18796296296296297" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/drawable/ic_favorite_rounded.xml" value="0.18796296296296297" />
@@ -17,7 +18,8 @@
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_dogs.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_dogs_host.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_favorites.xml" value="0.1828125" />
-        <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_favorites_host.xml" value="0.10009057971014493" />
+        <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_favorites_host.xml" value="0.4" />
+        <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_my_pets.xml" value="0.1828125" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/activity_pets.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/camera.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/fragment_cats.xml" value="0.10400000000000001" />
@@ -35,6 +37,7 @@
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/layout/view_loading.xml" value="0.18854166666666666" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/menu/menu_bottom_navigation.xml" value="0.2" />
         <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/menu/menu_search.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/alberto.iense/Desktop/CWI/treinamento-via/tcc/petsapp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2703125" />
       </map>
     </option>
   </component>
